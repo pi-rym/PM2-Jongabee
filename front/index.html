@@ -4,9 +4,96 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
   </head>
-  <body>
-    <h1>Proyecto de M2</h1>
+
+  <body style="background-color: rgba(14, 14, 14, 14);
+  font-family: serif;  margin: 25px; ">
+    <header>
+        <nav class="navbar" style="display: flex;
+        justify-content: center" >
+        <h1>JM</h1>
+        <a href="./index.html"
+        style="color: rgb(150,201,61,1); padding: 14px 20px; text-decoration: none;">Home</a>
+        <a href="./pages/sobre-mi.html"
+        style="color: rgb(150,201,61,1); padding: 14px 20px; text-decoration: none;">Sobre mí</a>
+        <a href="./pages/peli-fav.html"
+        style="color: rgb(150,201,61,1); padding: 14px 20px; text-decoration: none;">Películas favoritas</a>
+        <a href="./pages/serie-fav.html"
+        style="color: rgb(150,201,61,1); padding: 14px 20px; text-decoration: none;">Series favoritas</a>
+      </nav>
+    </header>
+    <main>   
+
+      <h2 style="text-align: center; color: rgb(150,201,61,1); margin: 5px;"> Películas Argentinas</h2>
+<section class="seis-divs" style="margin-top: 25px;">
+  <!-- <img src="https://www.lavanguardia.com/files/image_948_465/uploads/2023/02/01/63d99e8dea288.jpeg" alt=""> -->
+  <div class="wrapper">
+        <div class="card">
+          <img src="https://thedailytelevision.com/sites/default/files/notas/imagenes/interior/nueve_reinas_darin_vbig.jpg">
+          <div class="info">
+            <h1>Nueve reina</h1>
+            <p>Una de las mejores películas Argentina nos trae a Juan y Marcos son dos estafadores de poca monta que casualmente se ven 
+              envueltos en un asunto que les puede hacer millonarios: tienen menos de un día 
+              para hacer una estafa que no pueden fallar <br>¿Lo lograrán?</p>
+            <a href="https://www.youtube.com/watch?v=I42JYVjQkPI" target="_blank" class="btn">Tráiler</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="card">
+          <img src="https://cdn.eldestapeweb.com/eldestape/052023/1683152379267/el-secreto-de-sus-ojos-jpg..webp?cw=770&ch=440&extw=jpg">
+          <div class="info">
+            <h1>El secreto de sus ojos</h1>
+            <p>Benjamín es un oficial que 
+              acaba de jubilarse. Su sueño es escribir una novela y, para ello, intentará dar solución 
+              a un caso abierto, del cual fue testigo y protagonista. Reviviendo el caso, 
+              vuelve a su memoria el recuerdo de una mujer.</p>
+            <a href="https://www.youtube.com/watch?v=GqdLlefQ8gU" target="_blank" class="btn">Tráiler</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="card">
+          <img src="https://pastoralsj.org/images/peliculas/relatos.jpg">
+          <div class="info">
+            <h1>Relatos salvajes</h1>
+            <p>La violencia sin control ni causa aparente, que impulsa a perder el control. 
+              En seis episodios diferentes los personajes se verán empujados a situaciones al borde del abismo, 
+              perdiendo el control de sus vidas.</p>
+            <a href="https://www.youtube.com/watch?v=3BxE9osMt5U" target="_blank" class="btn">Tráiler</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="card">
+          <img src="https://eltrebol.gov.ar/wp-content/uploads/2022/01/giles-banner.jpg">
+          <div class="info">
+            <h1>La odisea de los giles</h1>
+            <p>Un grupo de vecinos se organizan para llevar a cabo un proyecto. 
+              Sin embargo en medio del corralito son víctimas de un abogado y un banquero, 
+              se organizarán para planear cómo recuperar sus ahorros.</p>
+            <a href="https://www.youtube.com/watch?v=ZP_o6GQaFW8" target="_blank" class="btn">Tráiler</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+      <h2 style="text-align: center; color: rgb(150,201,61,1); margin-top: 35px;"> Más películas</h2>
+      <section class="cards-container" id="movies-container">
+      </section>
+    </main>
 
     <script src="./scripts/tempData.js"></script>
     <script src="./scripts/index.js"></script>

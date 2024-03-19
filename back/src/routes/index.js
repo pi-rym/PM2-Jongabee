@@ -1,9 +1,10 @@
 const {Router}  =   require ('express')
-const moviesRoute = require ('./moviesRoute')
-const moviesController = require ('../controllers/moviesController')
+const moviesRouter = require ('./moviesRouter')
+// const moviesController = require ('../controllers/moviesController')
 
 const router = Router()
 
-router.use('/movies' , moviesRoute)
+router.use('/movies' , moviesRouter)
 
 module.exports = router
+

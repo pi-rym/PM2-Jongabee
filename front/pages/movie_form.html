@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -32,19 +32,40 @@
         style="color: rgb(255, 255, 255); padding: 14px 20px; text-decoration: none;">Formulario</a>
       </nav>
     </header>
-    <main>   
-      <p>
-        Hola mi nombre es Jonatan Mosqueda en ésta sección les voy a contar un poco
-        acerca de éste proyecto. En el <span class="badge badge-warning">Home</span> seguí los puntos que pedían desde
-        de la homework, si bien la idea al principio era otra, terminé agregando un poco del cine 
-        argentino. En la siguiente sección podrán ver un poco de mis <span class="badge badge-warning">Peliculas-favoritas</span>,
-        la verdad que no soy muy amante del cine pero sí me considero muy crítico. 
-        Y por último tenemos las <span class="badge badge-warning">series</span>que me han hecho trasnochar, por no poder dejar de verlas.
-        Una de ellas es Game Of Thrones que la ví dos veces, y nunca está de más verla de nuevo. Fin
-        
-    </p>
-      
-    </main>
+    
+    <section>
+        <h2>Crear nueva película</h2>
+
+        <form id="movieForm"
+        style="text-align: right; margin-right: 30%">
+
+        <label for="title">Título: </label>
+        <input type="text" name="title" id="title" placeholder="Ingresar título" autocomplete="off" required/>
+
+        <label for="year">Año: </label>
+        <input type="number" id="year" name="year" placeholder="Ingresar año" autocomplete="off" required>
+
+        <label for="director">Director: </label>
+        <input type="text" name="director" id="director" placeholder="Ingresar director" autocomplete="off" required>
+
+        <label for="duration">Duración: </label>
+        <input type="text" name="duration" id="duration" placeholder="Ingresar duración" autocomplete="off" required>
+
+        <label for="genre">Género: </label>
+        <input type="text" name="genre" id="genre" placeholder="Ingresar género" autocomplete="off" required>
+
+        <label for="rate">Calificación: </label>
+        <input type="text" name="rate" id="rate" placeholder="Ingresar calificación" autocomplete="off" required 
+        step="any">
+
+        <label for="poster">Imagen: </label>
+        <input type="text" name="poster" id="poster" placeholder="Ingresar URL de la imagen" autocomplete="off" required>
+
+        <input type="submit" value="Crear">
+        </form>
+    </section>
+    
+    <script src="../public/bundle.js"></script>
 
   </body>
 </html>

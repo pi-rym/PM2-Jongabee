@@ -1,10 +1,5 @@
-
+const createMovie = require ("./createMovie.js")
 const renderFilms = require("./runderFilms")
-
-// $.get('https://students-api.2.us-1.fl0.io/movies',(data)=> data.forEach(renderFilms))
-
-// $.get('https://students-api.up.railway.app/movies', (data)=> data.forEach(renderFilms))
-
 
 const axios = require ('axios')
 
@@ -16,4 +11,8 @@ const fetchData = async ()=> {
         console.log(error.mesaje);
     }
 }
-fetchData()
+document.addEventListener("DOMContentLoaded" , () => {
+    fetchData();
+    const submit = document.getElementById("movieForm")
+    submit?.addEventListener("submit", createMovie)
+})

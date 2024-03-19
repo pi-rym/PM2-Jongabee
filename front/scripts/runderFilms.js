@@ -21,7 +21,7 @@ function renderFilms (movie){
     <p><strong>Año:</strong> ${movie.year}</p>
 
     `
-    moviesContainer.appendChild(movieElement)
+    moviesContainer?.appendChild(movieElement)
     movieElement.appendChild(containerMovie)
 }
 module.exports = renderFilms

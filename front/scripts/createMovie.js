@@ -1,12 +1,14 @@
-const axios = require("axios")
+const axios = require("axios");
 
 function validateForm({title, year, director, duration, genre, rate, poster}) {
-if(!title || !year || !director || !duration || !genre[0] || !rate || !poster)
-    return "Todos los campos son obligatorios"
-if (isNaN(rate) || rate < 1 || rate > 10)
-    return "El rating debe ser entre 1 y 10"
-if (!poster.includes("https://"))
-    return "El póster debe ser una URL válida"
+    if(!title || !year || !director || !duration || !genre || !rate || !poster)
+        return "Todos los campos son obligatorios";
+    if(year < 1900 || year > 2025)
+        return "El año es incorrecto"
+    if (isNaN(rate) || rate < 1 || rate > 10)
+        return "La calificación debe ser entre 1 y 10";
+    if (!poster.includes("https://"))
+        return "El póster debe ser una URL válida";
 }
 
 function createMovie(event) {
@@ -20,13 +22,25 @@ function createMovie(event) {
     const rate = document.getElementById("rate").value;
     const poster = document.getElementById("poster").value;
 
-    const newMovie = { title, year, director, duration, genre, rate, poster }
+    const newMovie = { title, year, director, duration, genre, rate, poster };
 
     const error = validateForm(newMovie);
-    if (error) return alert(error)
+    if (error) return alert(error);
 
-    axios.post("http://localhost:3000/movies", newMovie).then(() => alert("Película creadaaa!! :)"))
-    .catch((error) => alert("Error al crear la película"));
+    axios.post("http://localhost:3000/movies", newMovie)
+        .then(() => {
+            alert("Película creadaaa!! :)");
+
+            document.getElementById("title").value = "";
+            document.getElementById("year").value = "";
+            document.getElementById("director").value = "";
+            document.getElementById("duration").value = "";
+            document.getElementById("genre").value = "";
+            document.getElementById("rate").value = "";
+            document.getElementById("poster").value = "";
+        })
+        .catch((error) => alert("Error al crear la película"));
 }
 
-module.exports = createMovie
+module.exports = createMovie;
+

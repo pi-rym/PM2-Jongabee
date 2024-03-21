@@ -1,6 +1,4 @@
-// $.get('https://students-api.2.us-1.fl0.io/movies', (data, status) => {
-//     renderFilms(data);
-// });
+
 
 const moviesContainer= document.getElementById("movies-container");
 
@@ -25,4 +23,3 @@ function renderFilms (movie){
     movieElement.appendChild(containerMovie)
 }
 module.exports = renderFilms
-// tempData.forEach(renderFilms) 

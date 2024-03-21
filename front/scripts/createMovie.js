@@ -9,6 +9,7 @@ function validateForm({title, year, director, duration, genre, rate, poster}) {
         return "La calificación debe ser entre 1 y 10";
     if (!poster.includes("https://"))
         return "El póster debe ser una URL válida";
+
 }
 
 function createMovie(event) {
